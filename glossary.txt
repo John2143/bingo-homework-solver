@@ -1,0 +1,25 @@
+00 FREE SPACE
+03 Spatial Perspective
+04 Scale
+05 Place
+07 Cartography
+14 Mathematical or Absolute Location
+17 Functional Regions
+21 Enviornmental Determinism
+27 Natural Increase Rate
+28 Doubling Time
+30 Infant Mortality Rate
+31 Life Expectancy
+35 Agricultural or Neolithic Revolution
+37 Population Pyramid
+44 Chain Migration
+49 Local Diversity vs Globalization
+52 Folk Culture
+53 Popular Culture
+57 Language Families
+59 Language Groups
+61 Lingua Franca
+66 Universalizing Religion
+68 Religious Branch
+73 Polytheism
+75 Fundamentalism

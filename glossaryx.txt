@@ -15,3 +15,8 @@
 59 These are sets of languages within a branch whose origin is in the relatively recent past.  Germanic examples include West Germanic, High Germanic & Scandinavian.
 21 This is the belief of early geographers that where people lived largely determined their activities and behavior, for example, a very warm climate hindered economic progress.
 3 This is the method geographers apply to the social science of geography, observing how phenomena differ from one place to another across the surface of the Earth.
+52 These are the traditional cultural practices, beliefs and physical artifacts that exist within homogeneous societies and are passed on from generation to generation.
+37 This graph represents the percentage of population by age and gender for a country, region, or city.  Its shape varies based on the stage of the demographic transition.
+66 This is a type of religion that tries to appeal to and to convert people from all over the world.  By far, the three largest examples are Christianity, Islam, and Buddhism.
+75 This is the literal interpretation and strict adherence to the basic principles of a religion, branch, denomination, or sect, so that deviations are believed to be sins.
+7 This is the study and practice of mapmaking.

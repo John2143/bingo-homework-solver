@@ -20,3 +20,8 @@
 66 This is a type of religion that tries to appeal to and to convert people from all over the world.  By far, the three largest examples are Christianity, Islam, and Buddhism.
 75 This is the literal interpretation and strict adherence to the basic principles of a religion, branch, denomination, or sect, so that deviations are believed to be sins.
 7 This is the study and practice of mapmaking.
+74 This is a religion in which there is an ascending order of central control over religious beliefs and practices, such as the plateaus from priest to Pope in Roman Catholicism.
+33 These are the countries of the world that are still in Stage 2 of the demographic transition, usually with high birth rates and with many people living in poverty.
+71 This is the doctrine or belief in the existence of only one god.  The first religion to practice this was Judaism, followed by Christianity and Islam.
+1 This is the study of where people live on Earth and why they live there. For example, what factors resulted in all of us being together at AEHS in Montgomery County, MD?
+29 This is average number of children a woman in a particular country will have during her lifetime. In the U.S., it is approximately two.  In a few countries, it exceeds six.

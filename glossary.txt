@@ -1,25 +1,41 @@
 00 FREE SPACE
+01 Human Geography
+02 Physical Geography
 03 Spatial Perspective
 04 Scale
 05 Place
 07 Cartography
+13 Situation or Relative Location
 14 Mathematical or Absolute Location
 17 Functional Regions
+18 Vernacular or Perceptial Regions
 21 Enviornmental Determinism
+23 Ecumene
+25 Physiological Density
 27 Natural Increase Rate
 28 Doubling Time
+29 Total Fertility Rate (TFR)
 30 Infant Mortality Rate
 31 Life Expectancy
+33 Less Developed Contries (LDCs)
+34 More Developed Countries (MDCs)
 35 Agricultural or Neolithic Revolution
 37 Population Pyramid
+38 Malthusian Model
 44 Chain Migration
+46 Undocumented Immigrants
 49 Local Diversity vs Globalization
 52 Folk Culture
 53 Popular Culture
 57 Language Families
+58 Language Branches
 59 Language Groups
 61 Lingua Franca
+62 Pidgin
 66 Universalizing Religion
+67 Ethnic Religion
 68 Religious Branch
+71 Monotheism
 73 Polytheism
+74 Hierarchical Religion
 75 Fundamentalism

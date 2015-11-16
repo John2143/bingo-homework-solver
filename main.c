@@ -62,11 +62,11 @@ void readGlossary(){
 		strcpy(glossaryx[index], outbuffer);
 	}
 
-	printf("====GLOSSARY====\n");
+	dPrint("====GLOSSARY====\n");
 	for(int i = 0; i < GLOSSARYSIZE; i++){
-		printf("%d %s", i, glossary[i]);
+		dPrint("%d %s", i, glossary[i]);
 		if(glossaryx[i]){
-			printf(" ANS: %s\n", glossaryx[i]);
+			dPrint(" ANS: %s\n", glossaryx[i]);
 		}
 	}
 	fclose(in);
@@ -93,11 +93,11 @@ void readBoard(int boardnum){
 			&digits[2], &digits[3],
 			&digits[4]
 		);
-#ifdef DEBUG
-	debug = fopen("debug.txt", "w");
-#endif
 		for(int j = 0; j < 5; j++){
 			board.id[i][j] = digits[j];
+			if(glossary[digits[j]][0] == '\0'){
+				printf("Unknown: %d\n", digits[j]);
+			}
 		}
 	}
 	printf("done");

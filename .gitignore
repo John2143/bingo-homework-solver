@@ -1,3 +1,4 @@
 clues/*
 !clues/.gitkeep
 debug.txt
+*.o

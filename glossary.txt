@@ -34,7 +34,9 @@
 38 Malthusian Model
 39 Mobility
 42 Push and Pull factors
+43 Refugee
 44 Chain Migration
+45 Quotas
 46 Undocumented Immigrants
 48 Guest Workers
 49 Local Diversity vs Globalization
@@ -49,6 +51,7 @@
 60 Dialects
 61 Lingua Franca
 62 Pidgin
+63 Creole Language
 66 Universalizing Religion
 67 Ethnic Religion
 68 Religious Branch

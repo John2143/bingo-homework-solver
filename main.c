@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
@@ -12,6 +11,18 @@
 #	define dPrint(...) fprintf(debug, __VA_ARGS__);
 #else
 #	define dPrint(...) ;
+#endif
+
+#ifdef _WIN32
+#	include <conio.h>
+#else
+int _getch(){
+	char next;
+	char ret = next = fgetc(stdin);
+	while(next != '\n' && next != EOF){next = fgetc(stdin);}
+	(void) next;
+	return ret;
+}
 #endif
 
 
@@ -274,7 +285,7 @@ int main(int argc, char **argv){
 					printf("Is this clue %s? (y/n)\n", word);
 					if(_getch() == 'y'){
 						board.data[j][cclue->col] = 1;
-						fprintf(glossaryxFile, "%d %s\n", cid, cclue->text);
+						fprintf(glossaryxFile, "%.2d %s\n", cid, cclue->text);
 						break;
 					}
 				}

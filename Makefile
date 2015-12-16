@@ -1,13 +1,13 @@
-CC=gcc -std=c11
+CC=gcc -std=c99
 CFLAGS=-c -Wall -Wextra
 LDFLAGS=-g
 SOURCES=main.c
 OBJECTS=$(SOURCES:.c=.o)
-EXECUTABLE=clues
+EXECUTABLE=clue
 
 all: $(SOURCES) $(EXECUTABLE)
 
-$(EXECUTABLE): $(OBJECTS) 
+$(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
 
 clean:

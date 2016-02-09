@@ -1,64 +1,25 @@
 00 FREE SPACE
-01 Human Geography
-02 Physical Geography
-03 Spatial Perspective
-04 Scale
-05 Place
-06 Hearth
-07 Cartography
-08 Map Scale
-09 Projection
-10 Contemporary tools
-11 Toponym or Place Name
-12 Site
-13 Situation or Relative Location
-14 Mathematical or Absolute Location
-15 Prime meridian; International date line
-17 Functional Regions
-18 Vernacular or Perceptial Regions
-21 Enviornmental Determinism
-22 Possibilism
-23 Ecumene
-24 Arithmetic or Population density
-25 Physiological Density
-27 Natural Increase Rate
-28 Doubling Time
-29 Total Fertility Rate (TFR)
-30 Infant Mortality Rate
-31 Life Expectancy
-33 Less Developed Contries (LDCs)
-34 More Developed Countries (MDCs)
-35 Agricultural or Neolithic Revolution
-36 Industrial revolution
-37 Population Pyramid
-38 Malthusian Model
-39 Mobility
-42 Push and Pull factors
-43 Refugee
-44 Chain Migration
-45 Quotas
-46 Undocumented Immigrants
-48 Guest Workers
-49 Local Diversity vs Globalization
-50 Material culture
-52 Folk Culture
-53 Popular Culture
-54 Cultural Landscape
-55 Assimilation
-57 Language Families
-58 Language Branches
-59 Language Groups
-60 Dialects
-61 Lingua Franca
-62 Pidgin
-63 Creole Language
-66 Universalizing Religion
-67 Ethnic Religion
-68 Religious Branch
-69 Denomination
-70 Sect
-71 Monotheism
-72 Animism
-73 Polytheism
-74 Hierarchical Religion
-75 Fundamentalism
+01 Ethnicity
+02 Race
+07 Ethnic Cleansing
+08 Balkanization
+09 Ethnic Enclave
+16 Imperialism
+17 Boundaries
+18 Landlocked state
+28 Commercial Agriculture
+30 Second Agricultural Revolution
+33 Plantation
+37 Ranching
+40 Von Thunen Model
+42 Aquaculture
+49 Gross demsestic product
+52 Compressed Modernity
+54 Cottage Industries
+56 Fossil Fuels
+60 Variable Costs
+61 Agglomeration; Deglomeration
+66 Metropolitan Area
+67 Megacities
+70 Central Business District CBD
+71 Models of Urban Structure

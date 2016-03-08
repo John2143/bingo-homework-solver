@@ -46,7 +46,7 @@ int findStr(const char* buffer, int blen, const char* findstr, int findstrlen){
 	return -1;
 }
 
-#define GLOSSARYSIZE 75 + 1 //+1 for free space
+#define GLOSSARYSIZE (75 + 1) //+1 for free space
 #define GLOSSARYSTRSIZE 60
 #define GLOSSARYXSTRSIZE 150 //Glossaryx > glossary
 
@@ -83,10 +83,17 @@ void readGlossary(){
 	fclose(in);
 }
 
+enum clueState{
+	CLUE_FALSE = 0,
+	CLUE_TRUE,
+	CLUE_MABYE
+};
+
 struct board{
 	int id[5][5];
-	int data[5][5];
+	enum clueState data[5][5];
 } board;
+
 void readBoard(int boardnum){
 	char buffer[40];
 	sprintf(buffer, "cards/%d.txt", boardnum); //First used as file name
@@ -114,6 +121,7 @@ void readBoard(int boardnum){
 	printf("done");
 	fclose(in);
 
+	//Set every slot to CLUE_FALSE
 	memset(board.data, 0, sizeof(board.data));
 }
 
@@ -217,7 +225,7 @@ int main(int argc, char **argv){
 #ifdef DEBUG
 	debug = fopen("debug.txt", "w");
 #endif
-	const char *BINGO = "BINGO";
+	static const char *BINGO = "BINGO";
 	{
 		int board;
 		if(argc == 1){
@@ -257,52 +265,111 @@ int main(int argc, char **argv){
 	printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=\n Clue #: Category | First\n Clue\n=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 	int numClues = 0;
 	while(cclue){
-		printf(" %.2i: %c | %c\n  %s\n===========================\n",
-			++numClues,
-			BINGO[cclue->col],
-			cclue->first,
-			cclue->text
-		);
+		
 		int answer = 0;
+		//Search glossaryx for current clue. answer will be 0 if not found.
 		for(int j = 0; j < GLOSSARYSIZE; j++){
 			if(!strncmp(glossaryx[j], cclue->text, GLOSSARYXSTRSIZE - 1)){
 				answer = j;
 				break;
 			}
 		}
+		numClues++;
 		if(answer){
-			printf("=========THIS IS %s===============\n", glossary[answer]);
+			printf("'%s' clue found.\n", glossary[answer]);
 			for(int j = 0; j < 5; j++){
 				if(board.id[j][cclue->col] == answer){
-					board.data[j][cclue->col] = 1;
+					//Display human readable format and push data
+					printf("Added at board pos %c%d, (%d, %d)\n", BINGO[cclue->col], answer, cclue->col + 1, j + 1);
+					board.data[j][cclue->col] = CLUE_TRUE;
 				}
 			}
 		}else{
+			//Ask the user about the possible clues
+			//Only need to ask about stuff in the correct row with the same first letter
+			int hasprinted = 0;
 			for(int j = 0; j < 5; j++){
 				int cid = board.id[j][cclue->col];
 				char *word = glossary[cid];
 				if(word[0] == cclue->first && glossaryx[cid] != '\0'){
-					printf("Is this clue %s? (y/n)\n", word);
-					if(_getch() == 'y'){
-						board.data[j][cclue->col] = 1;
-						fprintf(glossaryxFile, "%.2d %s\n", cid, cclue->text);
-						break;
+					if(!hasprinted){
+						hasprinted = 1;
+						printf("\n===========================\n %.2i: Column %c | Starts with %c\n  %s\n===========================\n",
+							numClues,
+							BINGO[cclue->col],
+							cclue->first,
+							cclue->text
+						);
 					}
+					printf("Is this word %d, '%s'? (y/n/m) ", cid, word);
+					char inp;
+			FAILIN: inp = _getch();
+					//Only allow yes or no answers
+					if(inp == 'y'){
+						board.data[j][cclue->col] = CLUE_TRUE;
+						//Add to glossary
+						fprintf(glossaryxFile, "%.2d %s\n", cid, cclue->text);
+						//No need to test the other things in the column
+						break;
+					}else if(inp == 'm'){
+						board.data[j][cclue->col] = CLUE_MABYE;
+					}else if(inp == 'n'){
+						//do nothing
+					}else{
+						//Get new input
+						goto FAILIN;
+					}
+					printf("%c\n", inp);
 				}
 			}
 		}
 		cclue = cclue->next;
 	}
-	board.data[2][2] = 1;
-	printf("Has %i clues\n", numClues);
+	
+	printf("\n============================\nFinal Answers: %d clues\n============================\n", numClues);
+	
+	//Display clues as list
 	for(int i = 0; i < 5; i++){
 		for(int j = 0; j < 5; j++){
-			putchar(board.data[i][j] ? 'X' : '-');
+			int id = board.id[i][j];
+			switch(board.data[i][j]){
+			case CLUE_FALSE:
+				//Do nothing if the clue is not there
+			break;
+			case CLUE_TRUE:
+				printf("%s\n", glossary[id]);
+			break;
+			case CLUE_MABYE:
+				printf("%s??\n", glossary[id]);
+				printf("Associated clue: '%s...'\n", glossaryx[id]);
+			break;
+			};
+		}
+	}
+	
+	//Free space enabled only after printing clues or else it prints "FREE SPACE"
+	board.data[2][2] = CLUE_TRUE;
+	
+	//Display board in ascii
+	for(int i = 0; i < 5; i++){
+		for(int j = 0; j < 5; j++){
+			switch(board.data[i][j]){
+			case CLUE_FALSE:
+				putchar('-');
+			break;
+			case CLUE_TRUE:
+				putchar('X');
+			break;
+			case CLUE_MABYE:
+				putchar('?');
+			break;
+			};
 		}
 		putchar('\n');
 	}
 
 	resetClue();
+	//Clear list
 	while(cclue){
 		struct clue* next = cclue->next;
 		free(cclue->text);

@@ -1,25 +1,50 @@
 00 FREE SPACE
 01 Ethnicity
 02 Race
+04 Racism
+05 Nationalism
+06 Apartheid
 07 Ethnic Cleansing
 08 Balkanization
 09 Ethnic Enclave
+12 Sovreignty
+13 City-States
+14 Nation-States
+15 Colony
 16 Imperialism
 17 Boundaries
 18 Landlocked state
+19 Morphology
+21 Federalism or Federal System
+25 International or Supernational Organizations
 28 Commercial Agriculture
+29 Vegetative Planting
 30 Second Agricultural Revolution
+31 Shifting Cultivation
+32 Pastoral Nomadism
 33 Plantation
+34 Crop Rotation
+35 Mixed Crop and Livestock Farming
 37 Ranching
 40 Von Thunen Model
 42 Aquaculture
+45 Human Development Index
+46 Primary/Secondary Sector
+47 Tertiary/Quaternary Sector
 49 Gross demsestic product
 52 Compressed Modernity
 54 Cottage Industries
 56 Fossil Fuels
+57 Location Theory
+59 Bulk Gaining/Reducing Sector
 60 Variable Costs
 61 Agglomeration; Deglomeration
+64 Core-Peripheral
 66 Metropolitan Area
 67 Megacities
+69 Primate/World City
 70 Central Business District CBD
 71 Models of Urban Structure
+72 Squatter Settlements
+74 Edge Cities
+75 Zoning and Land Use Planning

@@ -1,12 +1,14 @@
 00 FREE SPACE
 01 Ethnicity
 02 Race
+03 Nation or Nationality
 04 Racism
 05 Nationalism
 06 Apartheid
 07 Ethnic Cleansing
 08 Balkanization
 09 Ethnic Enclave
+11 State or Country
 12 Sovreignty
 13 City-States
 14 Nation-States
@@ -16,7 +18,9 @@
 18 Landlocked state
 19 Morphology
 21 Federalism or Federal System
+23 Devolution or Devolutionary Pressures
 25 International or Supernational Organizations
+27 Subsistance Agriculture
 28 Commercial Agriculture
 29 Vegetative Planting
 30 Second Agricultural Revolution
@@ -26,20 +30,25 @@
 34 Crop Rotation
 35 Mixed Crop and Livestock Farming
 37 Ranching
+38 Mediterranean Agriculture
 40 Von Thunen Model
 42 Aquaculture
 45 Human Development Index
 46 Primary/Secondary Sector
 47 Tertiary/Quaternary Sector
+48 Productivity
 49 Gross demsestic product
+51 Wallersteins Dependency Theory
 52 Compressed Modernity
 54 Cottage Industries
 56 Fossil Fuels
 57 Location Theory
+58 Break-Of-Bulk
 59 Bulk Gaining/Reducing Sector
 60 Variable Costs
 61 Agglomeration; Deglomeration
 64 Core-Peripheral
+65 City
 66 Metropolitan Area
 67 Megacities
 69 Primate/World City
